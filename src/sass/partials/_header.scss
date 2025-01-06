@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.SectionHeader {
+  background-image: url('../images/mobile.jpg');
+  background-repeat: round;
+  background-size: cover;
+  height: 230px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1000;
+}
+@media only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+  .SectionHeader {
+    background-image: url('../images/mobile@2x.jpg');
+  }
+}
+
+.Nav {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.LogoWrapper {
+  display: flex;
+  cursor: pointer;
+}
+.LogoImage {
+  display: flex;
+  align-items: center;
+}
+.LogoText {
+  display: none;
+}
+.UlNav {
+  display: flex;
+  gap: 40px;
+  list-style-type: none;
+  padding-inline-start: 0px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+.LiNav {
+  text-decoration: none;
+  line-height: 14.06px;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--WHITE);
+  position: relative;
+}
+.LiNav::after {
+  content: '';
+  background-color: var(--RED);
+  right: 0;
+  bottom: -4px;
+  height: 3px;
+  width: 0;
+  position: absolute;
+  transition: width 300ms, left 300ms;
+}
+.LiNav:hover::after {
+  width: 100%;
+  left: 0;
+}
+.Current::after {
+  content: '';
+  background-color: var(--RED);
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+}
+.headerMessage {
+  align-items: center;
+  width: 280px;
+  height: 40px;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  display: flex;
+  position: relative;
+}
+.not-found-message {
+  color: var(--RED);
+  font-size: 14px;
+  font-weight: 400;
+}
+.SearchForm {
+  display: flex;
+  align-items: center;
+  width: 280px;
+  height: 20px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  border-bottom: solid 1px #fff;
+}
+.SearchInput {
+  outline: none;
+  flex-grow: 1;
+  height: 100%;
+  color: var(--WHITE);
+  background-color: transparent;
+  font-size: 16px;
+  border: none;
+}
+.SearchButton {
+  border: none;
+  background-color: transparent;
+  color: var(--WHITE);
+  cursor: pointer;
+}
+.SearchIcon {
+  margin-right: 5px;
+  fill: var(--WHITE);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.SearchInput::placeholder {
+  color: var(--WHITE);
+
+  width: 96px;
+  height: 16px;
+}
+.SearchInput:focus::placeholder {
+  color: transparent;
+}
+@media screen and (min-width: 591px) {
+  .SectionHeader {
+    background-image: url('../images/tablet.jpg');
+    height: 219px;
+  }
+  .Nav {
+    padding: 40px 32px;
+  }
+  .LogoWrapper {
+    gap: 10px;
+  }
+  .LogoText {
+    font-weight: 500;
+    font-size: 30px;
+    color: var(--WHITE);
+    display: inline;
+    line-height: 35.16px;
+  }
+
+  @media only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+    .SectionHeader {
+      background-image: url('../images/tablet@2x.jpg');
+    }
+  }
+}
+@media screen and (min-width: 767px) {
+  .SearchForm {
+    width: 336px;
+  }
+  .headerMessage {
+    width: 336px;
+  }
+}
+@media screen and (min-width: 1071px) {
+  .SectionHeader {
+    background-image: url('../images/desktop.jpg');
+    height: 216px;
+  }
+}
+@media screen and (min-width: 1279px) {
+  .SearchForm {
+    width: 394px;
+  }
+  .headerMessage {
+    width: 394px;
+  }
+}

@@ -1,0 +1,11 @@
+/*
+ * Główny plik dla stylów STRONY LIBRARY.
+ * Wszystkie partials podłączamy tutaj.
+ */
+
+// Style dla pliku z przykładem HTML fragmentu
+@import './partials/library_style';
+@import './partials/footer';
+@import './partials/local_storage';
+@import './partials/modal';
+@import './partials/loader';
