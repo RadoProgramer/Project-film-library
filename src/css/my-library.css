@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+  --info-color: #ff6b08;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+  .gallery-library { 
+    padding-top: 60px;
+    margin: 0 auto;
+    width: 280px;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .library-film-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .library-film-item {
+    width: 280px;
+    min-height: 443px;
+    height: 100%;
+    list-style-type: none;
+    cursor: pointer;
+    transition: transform 350ms; /* Zmiana na transform */
+  }
+
+  .library-film-image {
+    width: 280px;
+    height: 398px;
+    border-radius: 6px;
+  }
+
+  .library-film-details {
+    margin: 5px 0 0 0;
+  }
+
+  .library-film-title {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 16px;
+  }
+
+  .library-film-info {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--info-color);
+    line-height: 16px;
+  }
+
+  .library-film-rating {
+    margin-right: 2px;
+    color: #fff;
+    background: var(--info-color);
+    border-radius: 5px;
+    padding: 2px 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.17;
+  }  
+
+  .empty-library{ 
+    display: flexbox; 
+    justify-content: center; 
+    text-align: center;
+ } 
+  
+ .lCatson{
+    width: 280px; 
+    height: 280px; 
+    margin-top: 10px;
+ } 
+  
+ .library-film-item:hover{          
+  scale: 1.02; 
+  transition: 350ms;
+ }
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .gallery-library {
+    width: 768px;  
+    height: auto;
+    display: flex;  
+    flex-wrap: wrap; 
+    justify-content: center;
+  
+    margin: auto;  
+    gap: 20px;
+  
+  }
+  .library-film-list {
+    gap: 32px;
+  }
+  .library-film-item {
+    width: 336px;
+    min-height: 495px;
+    display: inline-block;
+  }
+  .library-film-item:hover {
+    transform: scale(1.02); /* Zmiana na transform */
+  }
+  .library-film-image { 
+    width: 100%;
+    min-height: 455px;
+  }  
+
+  .empty-library{ 
+    display: flexbox; 
+    justify-content: center; 
+    text-align: center;
+ } 
+  
+
+  .lCatson{
+    width: 420px; 
+    height: 420px; 
+    margin-top: 10px; 
+ }
+}
+
+@media screen and (min-width: 1280px) {
+  .gallery-library {
+    width: 1280px;  
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-around;
+  }
+  .library-film-list {
+    gap: 16px;
+    justify-content: flex-start;
+    padding-left: 31.5px;
+  }
+  .library-film-item {
+    width: 395px;
+    min-height: 634px;
+    height: 100%;
+  }
+  .library-film-image { 
+    width: 100%;
+    height: 574px;
+  }
+  .library-film-title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .library-film-info {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+  } 
+
+  .empty-library{ 
+     display: flexbox; 
+     justify-content: center; 
+     text-align: center;
+  } 
+   
+  .lCatson{
+     width: 630px; 
+     height: 630px; 
+     margin-top: 10px;
+  }
+
+}
+ 
+.lCatson{ 
+  background-image: url('/src/image/Samuel\ l.Catson.jpg');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+} 
+ 
+.lCatson:hover{ 
+  scale: 1.02;       
+  transition: 350ms;
+}

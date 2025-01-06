@@ -1,0 +1,383 @@
+.film-details-is-hidden {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.film-details-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(20, 21, 34, 0.4);
+  width: 100%;
+  height: 100%;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.film-poster {
+  display: block;
+  height: 100px;
+  width: 100px;
+  background-color: aquamarine;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (min-width: 320px) {
+  .film-details-modal-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 280px;
+    max-height: 90%;
+    padding: 50px 20px;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-y: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .film-details-modal-window::-webkit-scrollbar {
+    /* WebKit */
+    width: 0;
+    height: 0;
+  }
+
+  .film-details-close {
+    display: flex;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 10px;
+    left: 235px;
+    fill: black;
+  }
+
+  .close-button {
+    height: 30px;
+    width: 30px;
+  }
+
+  .close-button:hover {
+    cursor: pointer;
+  }
+
+  .modal-film-poster-div {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .modal-film-poster {
+    height: 357px;
+    width: 240px;
+    background-color: gray;
+    border-radius: 5px;
+  }
+
+  .modal-film-details-div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .film-title {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: uppercase;
+    margin: 20px 0px;
+  }
+
+  .modal-film-details {
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  .data {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .types {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #8c8c8c;
+    width: 100px;
+  }
+
+  .avg {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #ffffff;
+    background-color: #ff6b01;
+    border-radius: 5px;
+    width: 36px;
+    height: 16px;
+    padding: 2px 3px;
+  }
+
+  .slash {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #8c8c8c;
+    padding: 0px 5px;
+  }
+
+  .number {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+    letter-spacing: 0em;
+    padding: 2px 3px;
+  }
+
+  /* .film-overview {
+  } */
+
+  .about {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: uppercase;
+    margin: 20px 0px 10px;
+  }
+
+  .film-desc {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 0px 0px;
+  }
+
+  .button-watched {
+    width: 110px;
+    height: 44px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: center;
+    background-color: transparent;
+    text-transform: uppercase;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      border 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .button-queue {
+    width: 110px;
+    height: 44px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: center;
+    background-color: transparent;
+    text-transform: uppercase;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      border 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .button-watched:hover,
+  .button-watched:focus,
+  .button-queue:hover,
+  .button-queue:focus,
+  .js-remove-from:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  }
+}
+
+@media (min-width: 768px) {
+  .film-details-modal-window {
+    width: 704px;
+    padding: 40px;
+    overflow-y: hidden;
+  }
+
+  .film-details-close {
+    top: 6px;
+    left: 665px;
+  }
+
+  .film-details-modal {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 50px;
+  }
+
+  .modal-film-poster {
+    height: 373px;
+    width: 264px;
+  }
+
+  .film-title {
+    margin: 0px 0px 20px;
+  }
+
+  .modal-film-details {
+    width: 300px;
+  }
+
+  .types {
+    width: 134px;
+  }
+
+  .film-desc {
+    width: 280px;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 0px 0px;
+  }
+
+  .button-watched {
+    width: 125px;
+  }
+
+  .button-queue {
+    width: 125px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .film-details-modal-window {
+    width: 760px;
+    padding: 40px 30px;
+    overflow-y: hidden;
+  }
+
+  .film-details-modal {
+    justify-content: left;
+    gap: 20px;
+  }
+
+  .film-details-close {
+    display: flex;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 6px;
+    left: 720px;
+  }
+
+  .modal-film-poster {
+    height: 420px;
+    width: auto;
+  }
+
+  .film-title {
+    font-size: 30px;
+    line-height: 35px;
+    margin: 0px 0px 15px;
+  }
+
+  .modal-film-details {
+    width: 310px;
+  }
+
+  .types {
+    width: 120px;
+  }
+
+  .film-desc {
+    width: 360px;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin: 20px 0px;
+    justify-content: left;
+  }
+
+  .button-watched {
+    width: 136px;
+  }
+
+  .button-queue {
+    width: 136px;
+  }
+}
+.js-remove-from {
+  color: #ffffff;
+  background-color: #ff6b08;
+  border: 1px solid #ff6b08;
+}
+
+particle {
+  position: fixed;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+}

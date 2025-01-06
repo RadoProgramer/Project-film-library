@@ -1,0 +1,11 @@
+.btn-youtube {
+  height: 40px;
+  width: 30px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+
+  background-image: url(../image/icons8-play-button-2.83526a1e.svg);
+  background-color: initial;
+}
