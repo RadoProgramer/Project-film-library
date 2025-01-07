@@ -2,14 +2,14 @@
   "name": "parcel-project-template",
   "version": "1.1.0",
   "description": "",
-  "homepage": "https://matpaluch.github.io/Filmoteka-gr5/",
+  "homepage": "https://RadoProgramer.github.io/Project-film-library",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /Filmoteka-gr5/"
+    "build": "parcel build src/*.html --public-url /Project-film-library/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MatPaluch/Filmoteka-gr5.git"
+    "url": "git+https://github.com/RadoProgramer/Project-film-library"
   },
   "keywords": [],
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
