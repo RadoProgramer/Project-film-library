@@ -5,7 +5,7 @@
   "homepage": "https://RadoProgramer.github.io/Project-film-library",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url ./"
+    "build": "parcel build src/*.html --public-url /Project-film-library/"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,9 @@
     "@parcel/transformer-sass": "^2.12.0",
     "buffer": "^6.0.3",
     "parcel": "^2.8.3",
-    "posthtml-include": "^1.7.4"
+    "posthtml-include": "^1.7.4",
+    "process": "^0.11.10",
+    "svgo": "^3.3.2"
   },
   "dependencies": {
     "axios": "^1.7.1"
