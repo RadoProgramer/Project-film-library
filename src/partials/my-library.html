@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filmoteka - My Library</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+      integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css"
+    />
+  </head>
+
+  <body>
+    <!-- W taki sposbu dodajemy fragmenty w główny HTML-plik strony. -->
+    <include src="./partials/to-top.html"></include>
+    <include src="./partials/header-lib.html"></include>
+    <include src="./partials/logWindow.html"></include>
+    <include src="./partials/loader.html"></include>
+    <include src="./partials/mobile-menu.html"></include>
+    <include src="./partials/dark-mode.html"></include>
+
+    <section class="gallery-library main-section"></section>
+    <!-- <section>Paginacja</section> -->
+
+    <include src="./partials/footer.html"></include>
+
+    <!-- Modal Window -->
+    <include src="./partials/modal.html"></include>
+    <include src="./partials/modal-team.html"></include>
+
+    <script src="../js/my-library.js" type="module"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+.footer_container {
+  display: flex;
+  width: auto;
+  height: 77px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  background-color: var(--color-footer-background);
+  position: relative; /* Dodany styl */
+}
+
+#myBtn {
+  text-decoration: underline;
+}
+
+.heart_svg {
+  fill: color #ff6b08;
+}

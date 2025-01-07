@@ -2,14 +2,14 @@
   "name": "parcel-project-template",
   "version": "1.1.0",
   "description": "",
-  "homepage": "https://matpaluch.github.io/Filmoteka-gr5/",
+  "homepage": "https://MartaTabor.github.io/goit-filmoteka-group6",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /Filmoteka-gr5/"
+    "build": "parcel build src/*.html --public-url /goit-filmoteka-group6/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MatPaluch/Filmoteka-gr5.git"
+    "url": "git+https://github.com/migace/parcel-project-template-pl-main.git"
   },
   "keywords": [],
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
@@ -21,9 +21,14 @@
     "@parcel/transformer-sass": "^2.12.0",
     "buffer": "^6.0.3",
     "parcel": "^2.8.3",
-    "posthtml-include": "^1.7.4"
+    "posthtml-include": "^1.7.4",
+    "process": "^0.11.10"
   },
   "dependencies": {
-    "axios": "^1.7.1"
+    "@parcel/resolver-glob": "^2.12.0",
+    "axios": "^1.6.7",
+    "firebase": "^10.9.0",
+    "firebaseui": "^6.1.0",
+    "notiflix": "^3.2.7"
   }
 }

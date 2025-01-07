@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|Kaushan+Script|Oswald&display=swap');
+
+:root {
+  --on-primary: rgb(250, 250, 250);
+  --on-background: rgb(66, 66, 66);
+  --on-background-alt: rgba(66, 66, 66, 0.7);
+  --background: rgb(255, 255, 255);
+  --box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme='dark'] {
+  --on-primary: #000;
+  --on-background: rgba(255, 255, 255, 0.9);
+  --on-background-alt: rgba(255, 255, 255, 0.7);
+  --background: #0e171e;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--on-background);
+  font-family: Comfortaa, sans-serif;
+  background-color: var(--background);
+}
+
+/* Dark Mode Toggle */
+.theme-switch-wrapper {
+  align-items: center;
+  display: flex;
+  position: absolute;
+  top: 243px;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+@media screen and (min-width: 768px) {
+  .theme-switch-wrapper {
+    align-items: center;
+    display: flex;
+    position: absolute;
+    top: 232px;
+    right: 60px;
+    transform: translateX(0);
+  }
+}
+
+.theme-switch-wrapper span {
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  min-width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
+#toggle-icon {
+  display: flex;
+  align-items: center;
+}
+
+.slider {
+  background: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider::before {
+  background: #fff;
+  bottom: 4px;
+  content: '';
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background: var(--info-color);
+}
+
+input:checked + .slider::before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round::before {
+  border-radius: 50%;
+}
+
+.fas {
+  font-size: 30px;
+  margin-right: 5px;
+}
